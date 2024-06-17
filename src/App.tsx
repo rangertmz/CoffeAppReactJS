@@ -1,26 +1,53 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+//import {} from 'react-router-dom'
+import NavBar from './components/NavBar';
+import Home from './pages/Home';
+import './assets/css/style.min.css'
+import './App.css'
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import About from './pages/About';
+import PageHeader from './components/PageHeader';
+import Footer from './components/Footer';
+import BackToTopButton from './components/BackToTopBtn';
 
-function App() {
+type RouteNameMap = {
+  [key: string]: string;
+};
+
+const App = () =>{
+  return(
+    <Router>
+      <Main/>
+    </Router>
+  )
+}
+
+const Main = () => {
+  const location = useLocation();
+
+  const routeNameMap:RouteNameMap = {
+    '/about': 'Conócenos',
+    '/service': 'Servicios',
+    '/menu': 'Menú',
+    '/reservation': 'Reservaciones',
+    '/contact': 'Contáctanos',
+  };
+
+  const showPageHeader = location.pathname !== '/';
+  const namePage = routeNameMap[location.pathname] || '';
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <NavBar/>
+      {showPageHeader && <PageHeader namePage={namePage} />}
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/about" element={<About/>} />
+      </Routes>
+      <Footer/>
+      <BackToTopButton/>
     </div>
   );
-}
+};
 
 export default App;
