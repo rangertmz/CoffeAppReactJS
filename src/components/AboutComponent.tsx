@@ -2,9 +2,10 @@ import React from 'react'
 import about from '../assets/img/about.png'
 
 const AboutComponent = () =>{
+
   return (
     <>
-    <div className="container-fluid py-5">
+    <div className="container-fluid py-5 about">
         <div className="container">
             <div className="section-title">
                 <h4 className="text-primary text-uppercase" style={{letterSpacing:'5px'}}>Sobre Nosotros</h4>

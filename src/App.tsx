@@ -9,6 +9,9 @@ import About from './pages/About';
 import PageHeader from './components/PageHeader';
 import Footer from './components/Footer';
 import BackToTopButton from './components/BackToTopBtn';
+import Service from './pages/Service';
+import Menu from './pages/Menu';
+import Reservation from './pages/Reservation';
 
 type RouteNameMap = {
   [key: string]: string;
@@ -43,6 +46,10 @@ const Main = () => {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/about" element={<About/>} />
+        <Route path="/service" element={<Service/>} />
+        <Route path="/menu" element={<Menu/>} />
+        <Route path="/reservation" element={<Reservation/>} />
+
       </Routes>
       <Footer/>
       <BackToTopButton/>

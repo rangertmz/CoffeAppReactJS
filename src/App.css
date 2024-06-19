@@ -1,6 +1,35 @@
 html{
   scroll-behavior: smooth;
 }
+.navs{
+  margin-top: 10px;
+  font-size: 22.5px;
+}
+.navs h1{
+  font-size: 75px;
+}
+.home .h1{
+  font-size: 40px;
+}
+.home .h2{
+  font-size: 180px;
+}
+.home .h3{
+  font-size: 40px;
+}
+
+.about p{
+  font-size: 22px;
+}
+.about h4{
+  font-size: 35px;
+}
+.about h1{
+  font-size: 65px;
+}
+.about a{
+  font-size: 20px;
+}
 
 .back-to-to {
   position: fixed;
