@@ -4,7 +4,7 @@ import MenuComponent from '../components/MenuComponent'
 const Menu = ()=> {
   return (
     <>
-    <MenuComponent/>
+    <MenuComponent id="menu"/>
     </>
   )
 }

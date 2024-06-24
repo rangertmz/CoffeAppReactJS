@@ -1,0 +1,89 @@
+.services-container {
+  padding: 5rem 0;
+  color: #d97730;
+}
+
+.services-content {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.services-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.service-item {
+  display: flex;
+  align-items: flex-start; /* Alineación modificada para evitar que los íconos estén centrados verticalmente */
+  background-color: #d2a679;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.service-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 1.5rem;
+}
+
+.service-details {
+  flex: 1;
+}
+
+.service-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #4b2e2e;
+  display: flex; /* Añadido para alinear íconos con el título */
+  align-items: center; /* Añadido para alinear íconos con el título */
+}
+
+.service-icon {
+  margin-right: 10px;
+  color: #ff8c42;
+  background-color: #4b2e2e;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.service-description {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #4b2e2e;
+}
+
+@media only screen and (max-width: 1200px) {
+  .services-list {
+    grid-template-columns: repeat(1, 1fr); /* Cambio a una columna en pantallas medianas */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .service-item {
+    flex-direction: column; /* Cambio a diseño de columna en pantallas pequeñas */
+    align-items: center; /* Alineación centrada para íconos y detalles en pantallas pequeñas */
+    text-align: center; /* Alineación centrada para texto en pantallas pequeñas */
+  }
+
+  .service-title {
+    justify-content: center; /* Alineación centrada de ícono y título en pantallas pequeñas */
+    margin-top: 1rem; /* Separación entre ícono y título en pantallas pequeñas */
+  }
+
+  .service-image {
+    margin-bottom: 1.5rem; /* Separación entre imagen y detalles en pantallas pequeñas */
+  }
+}

@@ -1,34 +1,26 @@
 html{
   scroll-behavior: smooth;
 }
-.navs{
-  margin-top: 10px;
-  font-size: 22.5px;
+::-webkit-scrollbar {
+  width: 12px;
 }
-.navs h1{
-  font-size: 75px;
+::-webkit-scrollbar-thumb {
+  background-color: #4b2e2e;
+  border-radius: 6px; 
 }
-.home .h1{
-  font-size: 40px;
-}
-.home .h2{
-  font-size: 180px;
-}
-.home .h3{
-  font-size: 40px;
+::-webkit-scrollbar-track {
+  background-color: #f5e1a4; 
 }
 
-.about p{
-  font-size: 22px;
-}
-.about h4{
-  font-size: 35px;
-}
-.about h1{
-  font-size: 65px;
-}
-.about a{
-  font-size: 20px;
+
+body {
+  background-color: #f5e1a4;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .back-to-to {
@@ -36,7 +28,26 @@ html{
   z-index: 1000;
   bottom: 40px;
   right: 40px;
+  background-color: #ff8c42;
+  color:#fff;
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
+.back-to-to:hover{
+  background-color: #4b2e2e;
+  color:#fff;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+
 @keyframes bounceInUp {
   from {
     opacity: 0;

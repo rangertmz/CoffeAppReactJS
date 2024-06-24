@@ -1,0 +1,148 @@
+.menu-header {
+    padding: 5rem 0;
+    text-align: center;
+    color:#4b2e2e
+  }
+  
+  .menu-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  .menu-title-text{
+    font-size: 3rem;
+    font-weight: bold;
+    color: #d97730;
+  }
+  .menu-title-subtitle{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #4b2e2e;
+  }
+  
+  .menu-category {
+    flex: 1;
+    margin: 0 1rem;
+  }
+  
+  .menu-category-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #4b2e2e;
+    margin-bottom: 2rem;
+  }
+  
+  .menu-item {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  
+  
+  .menu-item-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .menu-item-image {
+    position: relative; /* Asegura que sea relativo */
+    margin-right: 2rem; /* Ajusta según sea necesario */
+  }
+  
+  .menu-category-left .menu-item-price {
+    position: absolute;
+    top: 10px; /* Ajusta según sea necesario */
+    right: 74%; /* Ajusta según sea necesario */
+    transform: translateY(-50%); /* Centra verticalmente */
+    background-color: #ff8c42;
+    color: #f5e1a4;
+    padding: 10px; /* Ajusta el padding según sea necesario */
+    width: 50px; /* Ajusta el ancho del círculo */
+    height: 50px; /* Ajusta la altura del círculo */
+    border-radius: 50%; /* Hace que el precio sea redondo */
+    font-size: 1.2rem;
+    z-index: 1; /* Asegura que el precio esté encima de la imagen */
+    text-align: center; /* Alinea el texto al centro */
+    line-height: 50px; /* Ajusta la altura de línea para centrar verticalmente el texto */
+  }
+  .menu-category-right .menu-item-price {
+    position: absolute;
+    top: 10px; /* Ajusta según sea necesario */
+    right: 69%; /* Ajusta según sea necesario */
+    transform: translateY(-50%); /* Centra verticalmente */
+    background-color: #ff8c42;
+    color: #f5e1a4;
+    padding: 10px; /* Ajusta el padding según sea necesario */
+    width: 50px; /* Ajusta el ancho del círculo */
+    height: 50px; /* Ajusta la altura del círculo */
+    border-radius: 50%; /* Hace que el precio sea redondo */
+    font-size: 1.2rem;
+    z-index: 1; /* Asegura que el precio esté encima de la imagen */
+    text-align: center; /* Alinea el texto al centro */
+    line-height: 50px; /* Ajusta la altura de línea para centrar verticalmente el texto */
+  }
+  
+  
+  
+  
+  
+  
+  .menu-item-details {
+    flex: 1;
+  }
+  
+  .menu-item-name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4b2e2e; 
+    margin-bottom: 0.5rem;
+  }
+  
+  .menu-item-description {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: #4b2e2e;
+    margin-bottom: 1rem;
+  }
+
+@media only screen and (max-width: 1200px) {
+  .menu-item-name{
+    font-size: 1.5rem;
+  }
+  .menu-item-description{
+    font-size: 1.2rem;
+  }
+  .menu-item-image img{
+   width: 100px;
+   height: 100px;
+  }
+  .menu-item-image{
+    margin-right: 3rem;
+  }
+  .menu-category-left .menu-item-price{
+    top:27%;
+    left: 20%;
+  }
+  .menu-category-right .menu-item-price{
+    top:27%;
+    left: 25%;
+  }
+}
+
+@media screen and (max-width: 1210px) and (min-width: 860px) {
+  .menu-category-left .menu-item-price{
+    top:21%;
+    left: 18%;
+  }
+  .menu-category-right .menu-item-price{
+    top:21%;
+    left: 21%;
+  }
+}
+  

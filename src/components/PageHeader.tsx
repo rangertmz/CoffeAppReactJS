@@ -1,4 +1,7 @@
+
 import React from 'react'
+import {Link} from 'react-router-dom'
+import '../assets/css/pageHeader.css'
 
 type PageHeaderProps = {
     namePage: string;
@@ -6,14 +9,15 @@ type PageHeaderProps = {
 
 const PageHeader:React.FC<PageHeaderProps>=({namePage}) => {
   return (
-      <div className="d-flex flex-column align-items-center justify-content-center pt-0" >
-            <div className="container-fluid page-header mb-5 position-relative overlay-bottom" style={{minHeight:500, paddingTop:180, textAlign:'center'}}>
-            <h1 className="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">{namePage}</h1>
-            <div className="d-inline-flex mb-lg-5">
-                <p className="m-0 text-white"><a className="text-white" href="/">Inicio</a></p>
-                <p className="m-0 text-white px-2">/</p>
-                <p className="m-0 text-white">{namePage}</p>
+      <div className="container-page-header">
+            <div className="page-header-content" style={{minHeight:300, paddingTop:150, textAlign:'center',}}>
+            <h1 className="page-header-title">{namePage}</h1>
+            <div className="page-header-breadcrumbs">
+            <Link className="page-header-link" to="/">Inicio</Link>
+            <p className="page-header-linkoff"> / </p>
+            <Link className="page-header-link" to="#">{namePage}</Link>
             </div>
+            
         </div>
     </div>
   )

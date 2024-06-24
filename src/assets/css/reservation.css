@@ -1,0 +1,116 @@
+.reservation-container {
+    padding: 5rem 0;
+  }
+  
+  .reservation-content {
+    max-width: 100%;
+    margin: 0 60px 0 60px;
+    background-image: url('../img/carousel-1.jpg');
+  }
+  
+  .reservation-overlay {
+    position: relative;
+    padding: 2rem;
+    background: rgba(51, 33, 29, 0.8);
+    color: #fff;
+  }
+  
+  .reservation-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .reservation-col {
+    flex: 1;
+    padding: 2rem;
+  }
+   
+  .reservation-discount-content {
+    padding: 2rem;
+  }
+  
+  .discount-text {
+    margin-bottom: 2rem;
+  }
+  
+  .discount-title {
+    font-size: 4rem;
+    color: #ff8c42;
+  }
+  
+  .discount-subtitle {
+    font-size: 3rem;
+    color: #F5E1A4;
+  }
+  
+  .reservation-form-col {
+    text-align: center;
+  }
+  
+  .reservation-form-container {
+    padding: 1rem;
+    background-color: rgba(51, 33, 29, 0.8);
+    color: #fff;
+  }
+  
+  .form-title {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    color: #F5E1A4;
+  }
+  
+  .reservation-form .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #F5E1A4;
+    font-size: 20px;
+  }
+  
+  .form-input {
+    width: 90%;
+    padding: 1rem;
+    border: 1px solid #ff8c42;
+    background: transparent;
+    color: #F5E1A4;
+    font-size: 18px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-select {
+    width: 95%;
+    padding: 1rem;
+    border: 1px solid #ff8c42;
+    background: transparent;
+    color: #F5E1A4;
+    font-size: 18px;
+    transition: border-color 0.3s ease;
+  }
+
+  .form-select:focus, .form-input:focus {
+    outline: none;
+    border-color: #F5E1A4;
+}
+
+  .form-select option {
+    background: rgba(51, 33, 29, 0.8);
+    color: #F5E1A4;
+  }
+  
+  .form-button {
+    padding: 1rem 2rem;
+    background-color: #ff8c42;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .form-button:hover {
+    background-color: #d97730;
+  }
+  

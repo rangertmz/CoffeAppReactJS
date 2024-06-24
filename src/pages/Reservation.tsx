@@ -2,7 +2,7 @@ import ReservationComponent from "../components/ReservationComponent"
 
 const Reservation = () =>{
     return(
-        <ReservationComponent/>
+        <ReservationComponent id="reservation"/>
     )
 }
 

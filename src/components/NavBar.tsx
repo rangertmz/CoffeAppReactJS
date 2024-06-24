@@ -1,30 +1,71 @@
-import React from 'react'
-
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { FaTimes } from 'react-icons/fa';
+import '../assets/css/nav.css';
 
 const NavBar = () => {
-  return (
-    <div className="container-fluid p-0 nav-bar navs">
-        <nav className="navbar navbar-expand-lg bg-none navbar-dark py-3">
-            <a href="/" className="navbar-brand px-lg-4 m-0">
-                <h1 className="m-0 display-4 text-uppercase text-white">KOPPEE</h1>
-            </a>
-            <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                <div className="navbar-nav ml-auto p-4">
-                    <a href="/" className="nav-item nav-link">Inicio</a>
-                    <a href="about" className="nav-item nav-link">Conocenos</a>
-                    <a href="service" className="nav-item nav-link">Servicios</a>
-                    <a href="menu" className="nav-item nav-link">Menu</a>
-                    <a href="reservation" className="nav-item nav-link">Reservaciones</a>
-                    <a href="contact" className="nav-item nav-link">Contactanos</a>
-                    <a href="login" className="nav-item nav-link">Iniciar Sesion</a>
-                </div>
-            </div>
-        </nav>
-    </div>
-  )
-}
+    const [scrolled, setScrolled] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
 
-export default NavBar
+    const navLinks = [
+        { to: '/', text: 'Inicio' },
+        { to: '/about', text: 'Conócenos' },
+        { to: '/service', text: 'Servicios' },
+        { to: '/menu', text: 'Menú' },
+        { to: '/reservation', text: 'Reservaciones' },
+        { to: '/contact', text: 'Contáctanos' },
+        { to: '/login', text: 'Iniciar Sesión' }
+    ];
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const isScrolled = window.scrollY > 0;
+            setScrolled(isScrolled);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
+    return (
+        <div className={`container-nav ${scrolled ? 'scrolled' : ''}`}>
+            <nav className="nav">
+                <Link to="/" className="nav-title">
+                    <h1 className={`nav-logo ${scrolled ? 'scrolled' : ''}`}>KOPPEE</h1>
+                </Link>
+                <div className="nav-links">
+                    {navLinks.map((link, index) => (
+                        <Link key={index} to={link.to} className={`nav-item ${scrolled ? 'scrolled' : ''}`}>
+                            {link.text}
+                        </Link>
+                    ))}
+                </div>
+                <span className={`nav-btn ${scrolled ? 'scrolled' : ''}`} onClick={toggleMenu}>
+                    <GiHamburgerMenu className={`nav-btn-burger ${scrolled ? 'scrolled' : ''}`} />
+                </span>
+                <div className={`nav-links-sidebar ${menuOpen ? 'open' : ''}`}>
+                    <span className="nav-btn-close" onClick={toggleMenu}>
+                        <FaTimes />
+                    </span>
+                    <div className="nav-links-container">
+                        {navLinks.map((link, index) => (
+                            <Link key={index} to={link.to} className={`nav-item ${scrolled ? 'scrolled' : ''}`} onClick={toggleMenu}>
+                                {link.text}
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            </nav>
+        </div>
+    );
+};
+
+export default NavBar;

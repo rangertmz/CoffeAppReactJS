@@ -4,7 +4,7 @@ import ServiceComponent from '../components/ServiceComponent'
 const Service = ()=> {
   return (
     <>
-    <ServiceComponent/>
+    <ServiceComponent id="service"/>
     </>
   )
 }

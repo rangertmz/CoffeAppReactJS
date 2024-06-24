@@ -1,0 +1,154 @@
+/* Estilos para el contenedor principal */
+.contact-container {
+    padding-top: 5rem; /* Espaciado superior */
+    
+  }
+  
+  /* Estilos para el contenido principal */
+  .contact-content {
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrar el contenido horizontalmente */
+    
+  }
+  
+  /* Estilos para el título */
+  .contact-title {
+    text-align: center; /* Centrado del texto */
+    margin-bottom: 3rem; /* Espaciado inferior */
+    color: #4b2e2e;
+  }
+  
+  .contact-title-text {
+    text-transform: uppercase; /* Texto en mayúsculas */
+    letter-spacing: 5px; /* Espaciado entre letras */
+    font-size: 3rem;
+    color: #d97730;
+  }
+  
+  .contact-title-subtitle {
+    font-size: 2.5rem; /* Tamaño de fuente */
+  }
+  
+  /* Estilos para la información de contacto */
+  .contact-info {
+    display: flex; /* Mostrar elementos en línea */
+    justify-content: space-between; /* Distribución equitativa del espacio entre elementos */
+    margin-bottom: 3rem; /* Espaciado inferior */
+    color: #4b2e2e;
+    
+    
+  }
+  
+  .contact-info-group {
+    flex: 0 0 30%; /* Ancho fijo para cada grupo de información */
+    text-align: center; /* Centrado del texto */
+    margin-top: 20px;
+  }
+  
+  .contact-info-icon {
+    font-size: 2.5rem; /* Tamaño de los iconos */
+    margin-bottom: 0.5rem; /* Espaciado inferior */
+  }
+  
+  .contact-info-title {
+    margin-bottom: 1.5rem; /* Espaciado inferior */
+  }
+  
+/* Estilos para el formulario de contacto */
+.contact-form {
+    background: url('../img/bg.jpg');
+    position: relative; /* Posición relativa para alinear los pseudo-elementos */
+    padding: 4rem; /* Relleno interior */
+    border-radius: 8px; /* Borde redondeado */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra */
+    width: 60%;
+    max-width: 60%;
+    overflow: hidden; /* Ocultar contenido que se desborde */
+  }
+  
+  .contact-form::before {
+    content: ''; /* Contenido vacío para el pseudo-elemento */
+    position: absolute; /* Posición absoluta */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    background: rgba(51, 33, 29, 0.8);
+    pointer-events: none; /* Ignorar eventos de puntero en el pseudo-elemento */
+    z-index: 0; /* Capa inferior para el overlay */
+  }
+ .contact-form-group .contact-form-label {
+    position: relative;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #F5E1A4;
+    font-size: 20px;
+    z-index: 1;
+  }
+  
+  .contact-form-input,
+  .contact-form-input-textarea,
+  .contact-form-button {
+    position: relative; /* Asegura que los elementos sean relativos */
+    z-index: 1; /* Asegura que los inputs y botones estén sobre el overlay */
+    width: 95%; /* Ancho completo */
+    padding: 1rem; /* Relleno interior */
+    border: 1px solid #ff8c42; /* Borde */
+    background: transparent; /* Fondo transparente */
+    color: #f5e1a4; /* Color de texto */
+    font-size: 18px; /* Tamaño de fuente */
+    transition: border-color 0.3s ease;
+  }
+  .contact-form-input:focus,
+.contact-form-input-textarea:focus {
+  outline: none;
+  border-color: #f5e1a4; /* Cambia el color del borde cuando el input está enfocado */
+}
+  
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+  
+  .contact-form-input-textarea {
+    resize:none;
+    height: 100px;
+  }
+  
+  .contact-form-button {
+    padding: 1rem 2rem; /* Relleno interior */
+    background-color: #ff8c42; /* Color de fondo */
+    color: #fff; /* Color de texto */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor de puntero */
+    font-size: 18px; /* Tamaño de fuente */
+    width: 100%;
+  }
+  
+  .contact-form-button:hover {
+    background-color: #d97730; /* Color de fondo al pasar el mouse */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .contact-form {
+      width: 80%; /* Ancho ajustado para pantallas más pequeñas */
+      max-width: 80%;
+      padding: 3rem; /* Ajuste de relleno para pantallas más pequeñas */
+      margin: 20px;
+    }
+  
+    .contact-info {
+      flex-wrap: wrap; /* Cambiar a envoltura para los grupos de información */
+      
+    }
+  
+    .contact-info-group {
+      flex: 1;
+      margin-bottom: 1rem; /* Espaciado inferior reducido */
+      margin-right: -250%;
+    }
+  
+    .contact-info-icon {
+      font-size: 2rem; /* Tamaño de iconos reducido en pantallas pequeñas */
+    }
+  }
