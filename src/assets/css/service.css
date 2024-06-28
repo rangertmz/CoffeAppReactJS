@@ -1,6 +1,14 @@
+:root {
+  --color-fondo-claro: #FAF3DD;
+  --color-texto-principal: #3C3A3A;
+  --color-enfasis: #FF6347;
+  --color-secundario: #4682B4;
+  --color-fondo-secundario: #FFF8DC;
+}
+
 .services-container {
   padding: 5rem 0;
-  color: #d97730;
+  color: var(--color-enfasis);
 }
 
 .services-content {
@@ -23,8 +31,8 @@
 
 .service-item {
   display: flex;
-  align-items: flex-start; /* Alineación modificada para evitar que los íconos estén centrados verticalmente */
-  background-color: #d2a679;
+  align-items: flex-start;
+  background-color: var(--color-fondo-secundario); /* Cambio de color de fondo */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 2rem;
   border-radius: 8px;
@@ -46,15 +54,15 @@
 .service-title {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #4b2e2e;
-  display: flex; /* Añadido para alinear íconos con el título */
-  align-items: center; /* Añadido para alinear íconos con el título */
+  color: var(--color-texto-principal); /* Cambio de color de texto */
+  display: flex;
+  align-items: center;
 }
 
 .service-icon {
   margin-right: 10px;
-  color: #ff8c42;
-  background-color: #4b2e2e;
+  color: var(--color-enfasis); /* Cambio de color del ícono */
+  background-color: var(--color-texto-principal); /* Cambio de color de fondo del ícono */
   padding: 10px;
   border-radius: 50%;
 }
@@ -62,28 +70,28 @@
 .service-description {
   font-size: 1.6rem;
   line-height: 1.5;
-  color: #4b2e2e;
+  color: var(--color-texto-principal); /* Cambio de color de texto */
 }
 
 @media only screen and (max-width: 1200px) {
   .services-list {
-    grid-template-columns: repeat(1, 1fr); /* Cambio a una columna en pantallas medianas */
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
 @media only screen and (max-width: 768px) {
   .service-item {
-    flex-direction: column; /* Cambio a diseño de columna en pantallas pequeñas */
-    align-items: center; /* Alineación centrada para íconos y detalles en pantallas pequeñas */
-    text-align: center; /* Alineación centrada para texto en pantallas pequeñas */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .service-title {
-    justify-content: center; /* Alineación centrada de ícono y título en pantallas pequeñas */
-    margin-top: 1rem; /* Separación entre ícono y título en pantallas pequeñas */
+    justify-content: center;
+    margin-top: 1rem;
   }
 
   .service-image {
-    margin-bottom: 1.5rem; /* Separación entre imagen y detalles en pantallas pequeñas */
+    margin-bottom: 1.5rem;
   }
 }

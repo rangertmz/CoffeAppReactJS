@@ -1,53 +1,65 @@
-.container-page-header{
+:root {
+    --color-fondo-claro: #FAF3DD;
+    --color-texto-principal: #3C3A3A;
+    --color-enfasis: #FF6347;
+    --color-secundario: #4682B4;
+    --color-fondo-secundario: #FFF8DC;
+  }
+  
+  /* Estilos para el contenedor de la cabecera de página */
+  .container-page-header {
     padding: 50px 0;
     position: relative;
     margin-top: 0px;
     color: #fff;
-    padding: 20px;
     font-weight: bold;
-    background-image: url('../img/bg.jpg');
-}
-
-.container-page-header::before {
+    background-image: url('../img//overlay-4.jpeg');
+    background-size: cover;
+  }
+  
+  .container-page-header::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(51, 33, 29, 0.8);
+    background: rgba(0, 0, 0, 0.6);
     z-index: 1;
-}
-
-.page-header-title{
+  }
+  
+  /* Estilos para el título de la cabecera */
+  .page-header-title {
     font-size: 50px;
     font-weight: bold;
     position: relative;
     z-index: 2;
-}
-.page-header-breadcrumbs{
+  }
+  
+  /* Estilos para las migas de pan de la cabecera */
+  .page-header-breadcrumbs {
     display: flex;
     flex-direction: row;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
-}
-.page-header-link{
+  }
+  
+  /* Estilos para los enlaces de las migas de pan */
+  .page-header-link,
+  .page-header-linkoff {
     color: #fff;
     text-decoration: none;
     font-size: 20px;
     margin: 10px;
     font-weight: bold;
     z-index: 2;
-}
-.page-header-linkoff{
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
-    margin: 10px;
-    font-weight: bold;
-    z-index: 2;
-}
-.page-header-link:hover{
-    color: #FF8C42;
+  }
+  .page-header-linkoff{
+    cursor:default;
+  }
+  
+  .page-header-link:hover {
+    color: var(--color-enfasis); /* Color de énfasis al pasar el mouse */
     text-decoration: underline;
-}
+  }
+  

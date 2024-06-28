@@ -15,7 +15,7 @@ const PageHeader:React.FC<PageHeaderProps>=({namePage}) => {
             <div className="page-header-breadcrumbs">
             <Link className="page-header-link" to="/">Inicio</Link>
             <p className="page-header-linkoff"> / </p>
-            <Link className="page-header-link" to="#">{namePage}</Link>
+            <Link className="page-header-linkoff" to="#">{namePage}</Link>
             </div>
             
         </div>

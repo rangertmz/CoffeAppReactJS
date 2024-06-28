@@ -1,0 +1,213 @@
+:root {
+  --color-fondo-claro: #FAF3DD;
+  --color-texto-principal: #3C3A3A;
+  --color-enfasis: #FF6347;
+  --color-secundario: #4682B4;
+  --color-fondo-secundario: #FFF8DC;
+}
+
+/* Estilos para el contenedor principal */
+.login-container {
+  padding: 5rem 0;
+}
+
+.register-container {
+  padding: 5rem 0;
+}
+
+/* Estilos para el contenido principal */
+.login-content {
+  max-width: 100%;
+  height: 90vh;
+  max-height: 90vh;
+  margin: 0 60px;
+  background-image: url('../img/overlay-5.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.register-content {
+  max-width: 100%;
+  height: 119vh;
+  max-height: 119vh;
+  margin: 0 60px;
+  background-image: url('../img/overlay-6.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Estilos para el overlay */
+.login-overlay,
+.register-overlay {
+  position: relative;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+.login-overlay {
+  height: 83vh;
+}
+
+.register-overlay {
+  height: 112vh;
+}
+
+/* Estilos para el formulario */
+.login-row,
+.register-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.login-col,
+.register-col {
+  flex: 1;
+  padding: 2rem;
+}
+
+.login-discount-content,
+.register-discount-content {
+  padding: 2rem;
+}
+
+.login-text,
+.register-text {
+  margin-bottom: 2rem;
+}
+
+.login-title,
+.register-title {
+  font-size: 4rem;
+  color: var(--color-enfasis); /* Color de énfasis */
+}
+
+.login-subtitle,
+.register-subtitle {
+  font-size: 3rem;
+  color: var(--color-fondo-secundario); /* Color de fondo secundario */
+}
+
+.login-form-col,
+.register-form-col {
+  text-align: center;
+}
+
+.login-form-container,
+.register-form-container {
+  margin-top: 10%;
+  padding: 1rem;
+  background-color: rgba(02, 0, 0, 0.6);
+  color: #fff;
+}
+
+.form-title {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  color: var(--color-fondo-secundario); /* Color de fondo secundario */
+}
+
+.login-form .form-group,
+.register-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-fondo-secundario); /* Color de fondo secundario */
+  font-size: 20px;
+}
+
+.form-input,
+.form-select {
+  width: 90%;
+  padding: 1rem;
+  border: 1px solid var(--color-enfasis); /* Borde con color de énfasis */
+  background: transparent; /* Fondo transparente */
+  color: var(--color-fondo-secundario); /* Color de texto principal */
+  font-size: 18px;
+  transition: border-color 0.3s ease;
+}
+
+.form-select:focus,
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-secundario); /* Color de borde al enfocar */
+}
+
+.form-select option {
+  background: rgba(51, 33, 29, 0.8);
+  color: var(--color-fondo-secundario); /* Color de fondo secundario */
+}
+
+.form-button {
+  padding: 1rem 2rem;
+  background-color: var(--color-enfasis); /* Color de fondo */
+  color: #fff; /* Color de texto */
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.form-button:hover {
+  background-color: #d97730; /* Color de fondo al pasar el mouse */
+}
+
+.form-text {
+  color: var(--color-fondo-secundario); /* Color de fondo secundario */
+  font-size: 1.2rem;
+}
+
+.form-link {
+  color: var(--color-fondo-secundario); /* Color de fondo secundario */
+  text-decoration: none;
+}
+
+.form-link:hover {
+  color: var(--color-enfasis); /* Color de énfasis al pasar el mouse */
+  text-decoration: underline;
+}
+
+.form-error {
+  margin-top: -1.2rem;
+  color: red;
+  font-size: 1.2rem;
+  margin-bottom: -1rem;
+  display: none;
+}
+
+.form-error:before {
+  content: "*";
+  color: var(--color-enfasis); /* Color de énfasis */
+}
+
+@media screen and (max-width: 768px) {
+  .register-content {
+    margin: 0 20px; /* Ajuste de márgenes para pantallas pequeñas */
+    height: 200vh;
+    max-height: 100%;
+  }
+  .login-content{
+    margin: 0 20px;
+    height: 165vh;
+    max-height: 100%;
+  }
+
+  .register-overlay {
+    padding: 1rem; /* Ajuste de padding para pantallas pequeñas */
+    height: 200vh;
+    max-height: 100%;
+  }
+  .login-overlay{
+    padding: 1rem;
+    height: 160vh;
+    max-height: 100%;
+  }
+
+  .login-form-container,
+  .register-form-container {
+    margin-top: 5%; /* Ajuste de margen superior para pantallas pequeñas */
+  }
+}

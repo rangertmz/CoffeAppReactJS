@@ -1,97 +1,114 @@
-.container-footer {
-  background-color: #2F4F4F;
-  padding: 50px 0;
-  margin-top: 50px;
-  color: #F5E1A4;
-  padding: 20px;
-}
-.footer-content{
+:root {
+    --color-fondo-claro: #FAF3DD;
+    --color-texto-principal: #3C3A3A;
+    --color-enfasis: #FF6347;
+    --color-secundario: #4682B4;
+    --color-fondo-secundario: #FFF8DC;
+  }
+  
+  /* Estilos para el contenedor del pie de página */
+  .container-footer {
+    background-color: var(--color-texto-principal); /* Fondo secundario */
+    padding: 20px 40px;
+    margin-top: 50px;
+    color: var(--color-fondo-claro); /* Texto principal */
+  }
+  
+  /* Estilos para el contenido del pie de página */
+  .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-}
-
-.footer-title{
+  }
+  
+  /* Estilos para el título del pie de página */
+  .footer-title {
     display: flex;
     flex-direction: column;
-}
-.footer-title-text{
+  }
+  
+  .footer-title-text {
     font-size: 25px;
     font-weight: bold;
-}
-.footer-title p{
-    font-size: 15spx;
+  }
+  
+  .footer-title p {
+    font-size: 15px; /* Corregido el tamaño de fuente */
     padding: 10px;
-}
-
-.footer-social{
+  }
+  
+  /* Estilos para la sección de redes sociales */
+  .footer-social {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.footer-social-title{
+  }
+  
+  .footer-social-title {
     font-size: 25px;
     font-weight: bold;
-}
-.footer-social-icons{
+  }
+  
+  .footer-social-icons {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     margin-top: 20px;
-
-}
-.footer-social-icon{
-    color: #F5E1A4;
+  }
+  
+  .footer-social-icon {
+    color: var(--color-fondo-claro); /* Color de íconos */
     text-decoration: none;
     font-size: 40px;
     padding: 10px;
     margin: 5px;
-    transition:0.3s;
-    -webkit-transition:0.3s;
-    -moz-transition:0.3s;
-    -ms-transition:0.3s;
-    -o-transition:0.3s;
-}
-.footer-social-icon:hover{
-    color: #FF8C42;
+    transition: 0.3s;
+  }
+  
+  .footer-social-icon:hover {
+    color: var(--color-enfasis); /* Color de énfasis al pasar el mouse */
     text-decoration: underline;
-
-}
-
-.footer-hours{
+  }
+  
+  /* Estilos para el horario de atención */
+  .footer-hours {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.footer-hours-title{
+  }
+  
+  .footer-hours-title {
     font-size: 25px;
     font-weight: bold;
-}
-.footer-hours-text{
+  }
+  
+  .footer-hours-text {
     font-size: 15px;
-}
-
-
-
-
-.footer-copyright{
+  }
+  
+  /* Estilos para el texto de derechos de autor */
+  .footer-copyright {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
-}
-.footer-copyright-text{
+  }
+  
+  .footer-copyright-text {
     font-size: 20px;
     font-weight: bold;
-    color: #F5E1A4;
-}
-.footer-copyright-link{
-    color: #F5E1A4;
+    color: var(--color-fondo-claro); /* Color de texto */
+  }
+  
+  .footer-copyright-link {
+    color: var(--color-fondo-claro); /* Color de enlaces */
     text-decoration: none;
-}
-.footer-copyright-link:hover{
-    color: #FF8C42;
+  }
+  
+  .footer-copyright-link:hover {
+    color: var(--color-enfasis); /* Color de énfasis al pasar el mouse */
     text-decoration: underline;
-}
+  }
+  

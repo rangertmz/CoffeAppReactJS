@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import img from '../assets/img/carousel-2.jpg'
+import img from '../assets/img/overlay-3.jpeg'
 import AboutComponent from '../components/AboutComponent'
 import ServiceComponent from '../components/ServiceComponent'
 import MenuComponent from '../components/MenuComponent'
